@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D90F473B1DF330EA002FB7DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F473A1DF330EA002FB7DB /* main.m */; };
+		D90F473E1DF330EA002FB7DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F473D1DF330EA002FB7DB /* AppDelegate.m */; };
+		D90F47411DF330EA002FB7DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F47401DF330EA002FB7DB /* ViewController.m */; };
+		D90F47441DF330EA002FB7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90F47421DF330EA002FB7DB /* Main.storyboard */; };
+		D90F47461DF330EA002FB7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90F47451DF330EA002FB7DB /* Assets.xcassets */; };
+		D90F47491DF330EA002FB7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90F47471DF330EA002FB7DB /* LaunchScreen.storyboard */; };
+		D90F47541DF330EA002FB7DB /* ArtMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F47531DF330EA002FB7DB /* ArtMeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90F47501DF330EA002FB7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90F472E1DF330EA002FB7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90F47351DF330EA002FB7DB;
+			remoteInfo = ArtMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D90F47361DF330EA002FB7DB /* ArtMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90F473A1DF330EA002FB7DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D90F473C1DF330EA002FB7DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D90F473D1DF330EA002FB7DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D90F473F1DF330EA002FB7DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D90F47401DF330EA002FB7DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D90F47431DF330EA002FB7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90F47451DF330EA002FB7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D90F47481DF330EA002FB7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D90F474A1DF330EA002FB7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90F474F1DF330EA002FB7DB /* ArtMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90F47531DF330EA002FB7DB /* ArtMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtMeTests.m; sourceTree = "<group>"; };
+		D90F47551DF330EA002FB7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90F47331DF330EA002FB7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90F474C1DF330EA002FB7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D90F472D1DF330E9002FB7DB = {
+			isa = PBXGroup;
+			children = (
+				D90F47381DF330EA002FB7DB /* ArtMe */,
+				D90F47521DF330EA002FB7DB /* ArtMeTests */,
+				D90F47371DF330EA002FB7DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D90F47371DF330EA002FB7DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90F47361DF330EA002FB7DB /* ArtMe.app */,
+				D90F474F1DF330EA002FB7DB /* ArtMeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90F47381DF330EA002FB7DB /* ArtMe */ = {
+			isa = PBXGroup;
+			children = (
+				D90F473C1DF330EA002FB7DB /* AppDelegate.h */,
+				D90F473D1DF330EA002FB7DB /* AppDelegate.m */,
+				D90F473F1DF330EA002FB7DB /* ViewController.h */,
+				D90F47401DF330EA002FB7DB /* ViewController.m */,
+				D90F47421DF330EA002FB7DB /* Main.storyboard */,
+				D90F47451DF330EA002FB7DB /* Assets.xcassets */,
+				D90F47471DF330EA002FB7DB /* LaunchScreen.storyboard */,
+				D90F474A1DF330EA002FB7DB /* Info.plist */,
+				D90F47391DF330EA002FB7DB /* Supporting Files */,
+			);
+			path = ArtMe;
+			sourceTree = "<group>";
+		};
+		D90F47391DF330EA002FB7DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D90F473A1DF330EA002FB7DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D90F47521DF330EA002FB7DB /* ArtMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D90F47531DF330EA002FB7DB /* ArtMeTests.m */,
+				D90F47551DF330EA002FB7DB /* Info.plist */,
+			);
+			path = ArtMeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D90F47351DF330EA002FB7DB /* ArtMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90F47581DF330EA002FB7DB /* Build configuration list for PBXNativeTarget "ArtMe" */;
+			buildPhases = (
+				D90F47321DF330EA002FB7DB /* Sources */,
+				D90F47331DF330EA002FB7DB /* Frameworks */,
+				D90F47341DF330EA002FB7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtMe;
+			productName = ArtMe;
+			productReference = D90F47361DF330EA002FB7DB /* ArtMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90F474E1DF330EA002FB7DB /* ArtMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90F475B1DF330EA002FB7DB /* Build configuration list for PBXNativeTarget "ArtMeTests" */;
+			buildPhases = (
+				D90F474B1DF330EA002FB7DB /* Sources */,
+				D90F474C1DF330EA002FB7DB /* Frameworks */,
+				D90F474D1DF330EA002FB7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90F47511DF330EA002FB7DB /* PBXTargetDependency */,
+			);
+			name = ArtMeTests;
+			productName = ArtMeTests;
+			productReference = D90F474F1DF330EA002FB7DB /* ArtMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90F472E1DF330EA002FB7DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Caroline Hermans";
+				TargetAttributes = {
+					D90F47351DF330EA002FB7DB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					D90F474E1DF330EA002FB7DB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D90F47351DF330EA002FB7DB;
+					};
+				};
+			};
+			buildConfigurationList = D90F47311DF330EA002FB7DB /* Build configuration list for PBXProject "ArtMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90F472D1DF330E9002FB7DB;
+			productRefGroup = D90F47371DF330EA002FB7DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D90F47351DF330EA002FB7DB /* ArtMe */,
+				D90F474E1DF330EA002FB7DB /* ArtMeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90F47341DF330EA002FB7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90F47491DF330EA002FB7DB /* LaunchScreen.storyboard in Resources */,
+				D90F47461DF330EA002FB7DB /* Assets.xcassets in Resources */,
+				D90F47441DF330EA002FB7DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90F474D1DF330EA002FB7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90F47321DF330EA002FB7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90F47411DF330EA002FB7DB /* ViewController.m in Sources */,
+				D90F473E1DF330EA002FB7DB /* AppDelegate.m in Sources */,
+				D90F473B1DF330EA002FB7DB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90F474B1DF330EA002FB7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90F47541DF330EA002FB7DB /* ArtMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90F47511DF330EA002FB7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90F47351DF330EA002FB7DB /* ArtMe */;
+			targetProxy = D90F47501DF330EA002FB7DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90F47421DF330EA002FB7DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90F47431DF330EA002FB7DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D90F47471DF330EA002FB7DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90F47481DF330EA002FB7DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90F47561DF330EA002FB7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D90F47571DF330EA002FB7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D90F47591DF330EA002FB7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArtMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinehermans.ArtMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D90F475A1DF330EA002FB7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArtMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinehermans.ArtMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D90F475C1DF330EA002FB7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArtMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinehermans.ArtMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtMe.app/ArtMe";
+			};
+			name = Debug;
+		};
+		D90F475D1DF330EA002FB7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArtMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinehermans.ArtMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtMe.app/ArtMe";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90F47311DF330EA002FB7DB /* Build configuration list for PBXProject "ArtMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90F47561DF330EA002FB7DB /* Debug */,
+				D90F47571DF330EA002FB7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90F47581DF330EA002FB7DB /* Build configuration list for PBXNativeTarget "ArtMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90F47591DF330EA002FB7DB /* Debug */,
+				D90F475A1DF330EA002FB7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D90F475B1DF330EA002FB7DB /* Build configuration list for PBXNativeTarget "ArtMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90F475C1DF330EA002FB7DB /* Debug */,
+				D90F475D1DF330EA002FB7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90F472E1DF330EA002FB7DB /* Project object */;
+}
