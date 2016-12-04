@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction) paintingTapped:(UIButton *)sender;
+
+@property(nonatomic) NSString *paintingName;
+@property (nonatomic) NSMutableDictionary *paintingInfo;
+@property(nonatomic) NSMutableDictionary *currentPaintingDictionary;
 
 @end
 
