@@ -38,6 +38,8 @@
 @property CGFloat paintingFaceX;
 @property CGFloat paintingFaceY;
 
+@property CIDetector *detector;
+
 
 
 

@@ -63,6 +63,14 @@
     {
         NSLog(@"No device with AVMediaTypeVideo");
     }
+    
+    // face detect
+    NSDictionary *options = [[NSDictionary alloc] initWithObjectsAndKeys:
+                             @"CIDetectorAccuracy", @"CIDetectorAccuracyLow", nil];
+    
+    
+    _detector =  [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:options];
+    
     _paintingArtist = [_currentPaintingDictionary objectForKey:@"painter"];
     _paintingYear = [_currentPaintingDictionary objectForKey:@"year"];
     _paintingImage = [_currentPaintingDictionary objectForKey:@"img"];
@@ -88,6 +96,12 @@
     
     CGFloat sourceAspect = sourceExtent.size.width / sourceExtent.size.height;
     CGFloat previewAspect = _videoPreviewViewBounds.size.width  / _videoPreviewViewBounds.size.height;
+    
+    NSDictionary* imageOptions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:6] forKey:CIDetectorImageOrientation];
+
+    
+    NSArray *features = [_detector featuresInImage:sourceImage options:imageOptions];
+    NSLog(@"no of face detected: %d", [features count]);
     
 
     // FIND MEEEEEEE
