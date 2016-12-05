@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AVFoundation/AVFoundation.h"
+#import <CoreImage/CoreImage.h>
+#import <GLKit/GLKit.h>
+
 
 @interface SecondViewController : UIViewController
 
@@ -19,6 +23,22 @@
 @property (weak, nonatomic) IBOutlet UILabel *paintingNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *paintingArtistLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *paintingImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property AVCaptureDevice *videoDevice;
+@property AVCaptureSession *captureSession;
+@property dispatch_queue_t captureSessionQueue;
+@property GLKView *videoPreviewView;
+@property CIContext *ciContext;
+@property EAGLContext *eaglContext;
+@property CGRect videoPreviewViewBounds;
+
+@property CGFloat paintingFaceWidth;
+@property CGFloat paintingFaceHeight;
+@property CGFloat paintingFaceX;
+@property CGFloat paintingFaceY;
+
+
 
 
 @end

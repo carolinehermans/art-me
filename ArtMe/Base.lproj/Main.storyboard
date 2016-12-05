@@ -138,6 +138,10 @@
                                 <rect key="frame" x="8" y="24" width="19" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-GS-52d">
+                                <rect key="frame" x="79" y="99" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9F-kd-Ajy">
                                 <rect key="frame" x="0.0" y="18" width="75" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,6 +154,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jbe-hj-nex"/>
                     <connections>
+                        <outlet property="imageView" destination="KDA-GS-52d" id="BaI-8i-QrA"/>
                         <outlet property="paintingImage" destination="bNb-Zf-JJR" id="XTk-DJ-M41"/>
                         <outlet property="paintingImageView" destination="bNb-Zf-JJR" id="WDJ-PJ-9UW"/>
                         <outlet property="paintingNameLabel" destination="qqD-t0-5EW" id="sdl-e1-z2g"/>

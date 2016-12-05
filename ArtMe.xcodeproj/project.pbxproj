@@ -21,8 +21,10 @@
 		D9074F4C1DF5193C00BC234A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9074F4B1DF5193C00BC234A /* QuartzCore.framework */; };
 		D9074F4F1DF51A6800BC234A /* RightToLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9074F4E1DF51A6800BC234A /* RightToLeftSegue.m */; };
 		D9074F521DF51A8A00BC234A /* LeftToRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9074F511DF51A8A00BC234A /* LeftToRightSegue.m */; };
+		D9074F541DF5292800BC234A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9074F531DF5292800BC234A /* CoreImage.framework */; };
+		D9074F561DF5292F00BC234A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9074F551DF5292F00BC234A /* OpenGLES.framework */; };
+		D9074F961DF52D1A00BC234A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9074F951DF52D1A00BC234A /* AppDelegate.m */; };
 		D90F473B1DF330EA002FB7DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F473A1DF330EA002FB7DB /* main.m */; };
-		D90F473E1DF330EA002FB7DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F473D1DF330EA002FB7DB /* AppDelegate.m */; };
 		D90F47411DF330EA002FB7DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90F47401DF330EA002FB7DB /* ViewController.m */; };
 		D90F47441DF330EA002FB7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90F47421DF330EA002FB7DB /* Main.storyboard */; };
 		D90F47461DF330EA002FB7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90F47451DF330EA002FB7DB /* Assets.xcassets */; };
@@ -58,10 +60,12 @@
 		D9074F4E1DF51A6800BC234A /* RightToLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightToLeftSegue.m; sourceTree = "<group>"; };
 		D9074F501DF51A8A00BC234A /* LeftToRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftToRightSegue.h; sourceTree = "<group>"; };
 		D9074F511DF51A8A00BC234A /* LeftToRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftToRightSegue.m; sourceTree = "<group>"; };
+		D9074F531DF5292800BC234A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D9074F551DF5292F00BC234A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D9074F941DF52D1A00BC234A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D9074F951DF52D1A00BC234A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D90F47361DF330EA002FB7DB /* ArtMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90F473A1DF330EA002FB7DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D90F473C1DF330EA002FB7DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D90F473D1DF330EA002FB7DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D90F473F1DF330EA002FB7DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D90F47401DF330EA002FB7DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D90F47431DF330EA002FB7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9074F561DF5292F00BC234A /* OpenGLES.framework in Frameworks */,
+				D9074F541DF5292800BC234A /* CoreImage.framework in Frameworks */,
 				D9074F4C1DF5193C00BC234A /* QuartzCore.framework in Frameworks */,
 				D9074F431DF5099500BC234A /* AVFoundation.framework in Frameworks */,
 			);
@@ -98,6 +104,8 @@
 		D9074F411DF5099500BC234A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9074F551DF5292F00BC234A /* OpenGLES.framework */,
+				D9074F531DF5292800BC234A /* CoreImage.framework */,
 				D9074F4B1DF5193C00BC234A /* QuartzCore.framework */,
 				D9074F421DF5099500BC234A /* AVFoundation.framework */,
 			);
@@ -137,14 +145,14 @@
 			children = (
 				D9074F4D1DF51A6800BC234A /* RightToLeftSegue.h */,
 				D9074F4E1DF51A6800BC234A /* RightToLeftSegue.m */,
-				D90F473C1DF330EA002FB7DB /* AppDelegate.h */,
-				D90F473D1DF330EA002FB7DB /* AppDelegate.m */,
 				D90F47401DF330EA002FB7DB /* ViewController.m */,
 				D9074F371DF4F90900BC234A /* Perpetua.ttf */,
 				D90F473F1DF330EA002FB7DB /* ViewController.h */,
 				D90F47421DF330EA002FB7DB /* Main.storyboard */,
 				D9074F501DF51A8A00BC234A /* LeftToRightSegue.h */,
 				D9074F511DF51A8A00BC234A /* LeftToRightSegue.m */,
+				D9074F941DF52D1A00BC234A /* AppDelegate.h */,
+				D9074F951DF52D1A00BC234A /* AppDelegate.m */,
 				D90F475E1DF331C9002FB7DB /* SecondViewController.h */,
 				D90F475F1DF331C9002FB7DB /* SecondViewController.m */,
 				D90F47451DF330EA002FB7DB /* Assets.xcassets */,
@@ -289,8 +297,8 @@
 				D90F47601DF331C9002FB7DB /* SecondViewController.m in Sources */,
 				D90F47411DF330EA002FB7DB /* ViewController.m in Sources */,
 				D9074F4F1DF51A6800BC234A /* RightToLeftSegue.m in Sources */,
-				D90F473E1DF330EA002FB7DB /* AppDelegate.m in Sources */,
 				D90F473B1DF330EA002FB7DB /* main.m in Sources */,
+				D9074F961DF52D1A00BC234A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
