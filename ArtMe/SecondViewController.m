@@ -20,10 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _paintingFaceWidth = 85;
-    _paintingFaceHeight = 90;
-    _paintingFaceX = 130;
-    _paintingFaceY = 195;
+   
+    if ([self.paintingName isEqualToString:@"The Mona Lisa"]) {
+        _paintingFaceWidth = 80;
+        _paintingFaceHeight = 90;
+        _paintingFaceX = 136;
+        _paintingFaceY = 195;
+    } else if ([self.paintingName isEqualToString:@"Portrait of Henry VIII"]){
+        _paintingFaceWidth = 75;
+        _paintingFaceHeight = 80;
+        _paintingFaceX = 149;
+        _paintingFaceY = 195;
+    } else if ([self.paintingName isEqualToString:@"Self Portrait"]){
+        _paintingFaceWidth = 110;
+        _paintingFaceHeight = 130;
+        _paintingFaceX = 120;
+        _paintingFaceY = 220;
+    }
     
     _eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     _videoPreviewView = [[GLKView alloc] initWithFrame:CGRectMake(_paintingFaceX, _paintingFaceY, _paintingFaceHeight, _paintingFaceWidth) context:_eaglContext];
@@ -80,6 +93,8 @@
     _paintingYear = [_currentPaintingDictionary objectForKey:@"year"];
     _paintingImage = [_currentPaintingDictionary objectForKey:@"img"];
     
+    _drawRect = CGRectMake(_paintingFaceX, _paintingFaceY, _paintingFaceHeight, _paintingFaceWidth);
+    
     [self displayPaintingInfo];
 }
 
@@ -94,15 +109,27 @@
     sourceImage = [sourceImage imageByApplyingTransform:CGAffineTransformMakeTranslation(0, sourceExtent.size.height)];
     
     // Image processing
-    CIFilter * vignetteFilter = [CIFilter filterWithName:@"CIVignetteEffect"];
-    [vignetteFilter setValue:sourceImage forKey:kCIInputImageKey];
-    [vignetteFilter setValue:[CIVector vectorWithX:sourceExtent.size.width/2 Y:sourceExtent.size.height/2] forKey:kCIInputCenterKey];
-    [vignetteFilter setValue:@(sourceExtent.size.width/2) forKey:kCIInputRadiusKey];
-    CIImage *filteredImage = [vignetteFilter outputImage];
+
+    CIFilter *tempAndTintFilter = [CIFilter filterWithName:@"CITemperatureAndTint"];
+    [tempAndTintFilter setValue:sourceImage forKey:kCIInputImageKey];
+    [tempAndTintFilter setValue:[CIVector vectorWithX:6500 Y:500] forKey:@"inputNeutral"];
+    if ([_paintingName isEqualToString:@"The Mona Lisa"]) {
+        [tempAndTintFilter setValue:[CIVector vectorWithX:6500 Y:410] forKey:@"inputTargetNeutral"];
+    } else if ([_paintingName isEqualToString:@"Portrait of Henry VIII"]){
+        [tempAndTintFilter setValue:[CIVector vectorWithX:6520 Y:500] forKey:@"inputTargetNeutral"];
+    } else if ([_paintingName isEqualToString:@"Self Portrait"]){
+        [tempAndTintFilter setValue:[CIVector vectorWithX:6490 Y:480] forKey:@"inputTargetNeutral"];
+    }
+    CIImage *filteredImage = [tempAndTintFilter outputImage];
     
-    CIFilter *effectFilter = [CIFilter filterWithName:@"CIPhotoEffectInstant"];
-    [effectFilter setValue:filteredImage forKey:kCIInputImageKey];
-    filteredImage = [effectFilter outputImage];
+    if ([_paintingName isEqualToString:@"Self Portrait"]) {
+        CIFilter *colorControlsFilter = [CIFilter filterWithName:@"CIExposureAdjust"];
+        [colorControlsFilter setValue: filteredImage forKey:kCIInputImageKey];
+        [colorControlsFilter setValue: @0.9 forKey:@"inputEV" ];
+        filteredImage = [colorControlsFilter outputImage];
+    }
+    
+
     
     CGFloat sourceAspect = sourceExtent.size.width / sourceExtent.size.height;
     CGFloat previewAspect = _videoPreviewViewBounds.size.width  / _videoPreviewViewBounds.size.height;
@@ -113,11 +140,10 @@
     NSArray *features = [_detector featuresInImage:sourceImage options:imageOptions];
 //    NSLog(@"no of face detected: %d", [features count]);
     
-    CGRect drawRect = CGRectMake(_paintingFaceX, _paintingFaceY, _paintingFaceHeight, _paintingFaceWidth);
     
     for(CIFaceFeature* feature in features)
     {
-        drawRect = feature.bounds;
+        _drawRect = feature.bounds;
     }
 
     
@@ -135,7 +161,7 @@
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     
     if (filteredImage)
-        [_ciContext drawImage:filteredImage inRect:_videoPreviewViewBounds fromRect:drawRect];
+        [_ciContext drawImage:filteredImage inRect:_videoPreviewViewBounds fromRect:_drawRect];
     
     [_videoPreviewView display];
     

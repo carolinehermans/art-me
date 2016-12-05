@@ -32,6 +32,8 @@
 @property CIContext *ciContext;
 @property EAGLContext *eaglContext;
 @property CGRect videoPreviewViewBounds;
+@property CGRect drawRect;
+
 
 @property CGFloat paintingFaceWidth;
 @property CGFloat paintingFaceHeight;

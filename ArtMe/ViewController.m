@@ -45,10 +45,10 @@
 - (void) populatePaintingInfoDictionary {
     NSMutableDictionary *monaDictionary = [self populatePaintingDictionaryWithPainter:@"Leonardo Da Vinci" WithYear:@"1506" WithImage:@"mona.png"];
     NSMutableDictionary *kissDictionary = [self populatePaintingDictionaryWithPainter:@"Gustav Klimt" WithYear:@"1908" WithImage:@"kiss.jpg"];
-    NSMutableDictionary *pearlDictionary = [self populatePaintingDictionaryWithPainter:@"Johannes Vermeer" WithYear:@"1665" WithImage:@"pearl.jpg"];
-    NSMutableDictionary *henryDictionary = [self populatePaintingDictionaryWithPainter:@"Hans Holbein" WithYear:@"1537" WithImage:@"henry.jpg"];
-    NSMutableDictionary *selfDictionary = [self populatePaintingDictionaryWithPainter:@"Vincent Van Gogh" WithYear:@"1889" WithImage:@"self.jpg"];
-    NSMutableDictionary *cavalierDictionary = [self populatePaintingDictionaryWithPainter:@"Frans Hals" WithYear:@"1624" WithImage:@"cavalier.jpg"];
+    NSMutableDictionary *pearlDictionary = [self populatePaintingDictionaryWithPainter:@"Johannes Vermeer" WithYear:@"1665" WithImage:@"pearl.png"];
+    NSMutableDictionary *henryDictionary = [self populatePaintingDictionaryWithPainter:@"Hans Holbein" WithYear:@"1537" WithImage:@"henry.png"];
+    NSMutableDictionary *selfDictionary = [self populatePaintingDictionaryWithPainter:@"Vincent Van Gogh" WithYear:@"1889" WithImage:@"self.png"];
+    NSMutableDictionary *cavalierDictionary = [self populatePaintingDictionaryWithPainter:@"Frans Hals" WithYear:@"1624" WithImage:@"cavalier.png"];
     
     [_paintingInfo setObject:monaDictionary forKey:@"The Mona Lisa"];
     [_paintingInfo setObject:kissDictionary forKey:@"The Kiss"];
