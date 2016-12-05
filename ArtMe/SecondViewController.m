@@ -22,9 +22,9 @@
     [super viewDidLoad];
    
     if ([self.paintingName isEqualToString:@"The Mona Lisa"]) {
-        _paintingFaceWidth = 80;
+        _paintingFaceWidth = 75;
         _paintingFaceHeight = 90;
-        _paintingFaceX = 136;
+        _paintingFaceX = 138;
         _paintingFaceY = 195;
     } else if ([self.paintingName isEqualToString:@"Portrait of Henry VIII"]){
         _paintingFaceWidth = 75;
@@ -34,8 +34,13 @@
     } else if ([self.paintingName isEqualToString:@"Self Portrait"]){
         _paintingFaceWidth = 110;
         _paintingFaceHeight = 130;
-        _paintingFaceX = 120;
-        _paintingFaceY = 220;
+        _paintingFaceX = 110;
+        _paintingFaceY = 250;
+    } else if ([self.paintingName isEqualToString:@"Girl with a Pearl Earring"]){
+        _paintingFaceWidth = 100;
+        _paintingFaceHeight = 130;
+        _paintingFaceX = 83;
+        _paintingFaceY = 265;
     }
     
     _eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
@@ -118,11 +123,18 @@
     } else if ([_paintingName isEqualToString:@"Portrait of Henry VIII"]){
         [tempAndTintFilter setValue:[CIVector vectorWithX:6520 Y:500] forKey:@"inputTargetNeutral"];
     } else if ([_paintingName isEqualToString:@"Self Portrait"]){
-        [tempAndTintFilter setValue:[CIVector vectorWithX:6490 Y:480] forKey:@"inputTargetNeutral"];
+        [tempAndTintFilter setValue:[CIVector vectorWithX:6700 Y:510] forKey:@"inputTargetNeutral"];
+    } else if ([_paintingName isEqualToString:@"Girl with a Pearl Earring"]){
+        [tempAndTintFilter setValue:[CIVector vectorWithX:6600 Y:490] forKey:@"inputTargetNeutral"];
     }
     CIImage *filteredImage = [tempAndTintFilter outputImage];
     
     if ([_paintingName isEqualToString:@"Self Portrait"]) {
+        CIFilter *colorControlsFilter = [CIFilter filterWithName:@"CIExposureAdjust"];
+        [colorControlsFilter setValue: filteredImage forKey:kCIInputImageKey];
+        [colorControlsFilter setValue: @0.9 forKey:@"inputEV" ];
+        filteredImage = [colorControlsFilter outputImage];
+    } else if ([_paintingName isEqualToString:@"Girl with a Pearl Earring"]) {
         CIFilter *colorControlsFilter = [CIFilter filterWithName:@"CIExposureAdjust"];
         [colorControlsFilter setValue: filteredImage forKey:kCIInputImageKey];
         [colorControlsFilter setValue: @0.9 forKey:@"inputEV" ];
