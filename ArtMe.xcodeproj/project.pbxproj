@@ -16,7 +16,6 @@
 		D9074F361DF4F45900BC234A /* pearl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9074F2F1DF4F45900BC234A /* pearl.jpg */; };
 		D9074F381DF4F90900BC234A /* Perpetua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9074F371DF4F90900BC234A /* Perpetua.ttf */; };
 		D9074F3A1DF4F9F200BC234A /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D9074F391DF4F9F200BC234A /* camera.png */; };
-		D9074F3C1DF4FA5600BC234A /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D9074F3B1DF4FA5600BC234A /* back.png */; };
 		D9074F401DF4FC8300BC234A /* bakck.png in Resources */ = {isa = PBXBuildFile; fileRef = D9074F3F1DF4FC8300BC234A /* bakck.png */; };
 		D9074F431DF5099500BC234A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9074F421DF5099500BC234A /* AVFoundation.framework */; };
 		D9074F4C1DF5193C00BC234A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9074F4B1DF5193C00BC234A /* QuartzCore.framework */; };
@@ -51,8 +50,7 @@
 		D9074F2E1DF4F45900BC234A /* kiss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kiss.jpg; path = img/kiss.jpg; sourceTree = "<group>"; };
 		D9074F2F1DF4F45900BC234A /* pearl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pearl.jpg; path = img/pearl.jpg; sourceTree = "<group>"; };
 		D9074F371DF4F90900BC234A /* Perpetua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Perpetua.ttf; sourceTree = "<group>"; };
-		D9074F391DF4F9F200BC234A /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		D9074F3B1DF4FA5600BC234A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		D9074F391DF4F9F200BC234A /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = ArtMe/camera.png; sourceTree = "<group>"; };
 		D9074F3F1DF4FC8300BC234A /* bakck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bakck.png; path = img/bakck.png; sourceTree = "<group>"; };
 		D9074F421DF5099500BC234A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D9074F4B1DF5193C00BC234A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -109,6 +107,7 @@
 		D90F472D1DF330E9002FB7DB = {
 			isa = PBXGroup;
 			children = (
+				D9074F391DF4F9F200BC234A /* camera.png */,
 				D9074F3F1DF4FC8300BC234A /* bakck.png */,
 				D9074F291DF4F45900BC234A /* Home.jpg */,
 				D9074F2A1DF4F45900BC234A /* self.jpg */,
@@ -141,8 +140,6 @@
 				D90F473C1DF330EA002FB7DB /* AppDelegate.h */,
 				D90F473D1DF330EA002FB7DB /* AppDelegate.m */,
 				D90F47401DF330EA002FB7DB /* ViewController.m */,
-				D9074F3B1DF4FA5600BC234A /* back.png */,
-				D9074F391DF4F9F200BC234A /* camera.png */,
 				D9074F371DF4F90900BC234A /* Perpetua.ttf */,
 				D90F473F1DF330EA002FB7DB /* ViewController.h */,
 				D90F47421DF330EA002FB7DB /* Main.storyboard */,
@@ -265,7 +262,6 @@
 				D90F47491DF330EA002FB7DB /* LaunchScreen.storyboard in Resources */,
 				D9074F351DF4F45900BC234A /* kiss.jpg in Resources */,
 				D90F47461DF330EA002FB7DB /* Assets.xcassets in Resources */,
-				D9074F3C1DF4FA5600BC234A /* back.png in Resources */,
 				D9074F381DF4F90900BC234A /* Perpetua.ttf in Resources */,
 				D9074F321DF4F45900BC234A /* henry.jpg in Resources */,
 				D90F47441DF330EA002FB7DB /* Main.storyboard in Resources */,
