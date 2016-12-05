@@ -20,16 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _paintingFaceWidth = 60;
+    _paintingFaceWidth = 85;
     _paintingFaceHeight = 90;
-    _paintingFaceX = 135;
-    _paintingFaceY = 200;
+    _paintingFaceX = 130;
+    _paintingFaceY = 195;
     
     _eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     _videoPreviewView = [[GLKView alloc] initWithFrame:CGRectMake(_paintingFaceX, _paintingFaceY, _paintingFaceHeight, _paintingFaceWidth) context:_eaglContext];
     _videoPreviewView.enableSetNeedsDisplay = NO;
         
     _videoPreviewView.backgroundColor = [UIColor clearColor];
+    _paintingImageView.backgroundColor = [UIColor clearColor];
+
+
 
     
     _videoPreviewView.transform = CGAffineTransformMakeRotation(M_PI_2);
@@ -37,6 +40,8 @@
  
     [self.view addSubview:_videoPreviewView];
     [self.view bringSubviewToFront:_videoPreviewView];
+    
+    [self.view bringSubviewToFront:_paintingImageView];
     
     // bind the frame buffer to get the frame buffer width and height;
     // the bounds used by CIContext when drawing to a GLKView are in pixels (not points),
@@ -82,7 +87,12 @@
 {
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *sourceImage = [CIImage imageWithCVPixelBuffer:(CVPixelBufferRef)imageBuffer options:nil];
+
     CGRect sourceExtent = sourceImage.extent;
+    
+    sourceImage = [sourceImage imageByApplyingTransform:CGAffineTransformMakeScale(1, -1)];
+    sourceImage = [sourceImage imageByApplyingTransform:CGAffineTransformMakeTranslation(0, sourceExtent.size.height)];
+    
     // Image processing
     CIFilter * vignetteFilter = [CIFilter filterWithName:@"CIVignetteEffect"];
     [vignetteFilter setValue:sourceImage forKey:kCIInputImageKey];
@@ -101,12 +111,15 @@
 
     
     NSArray *features = [_detector featuresInImage:sourceImage options:imageOptions];
-    NSLog(@"no of face detected: %d", [features count]);
+//    NSLog(@"no of face detected: %d", [features count]);
     
-
-    // FIND MEEEEEEE
-    // CGRECTMAKE FACE RECT!!!!!!
     CGRect drawRect = CGRectMake(_paintingFaceX, _paintingFaceY, _paintingFaceHeight, _paintingFaceWidth);
+    
+    for(CIFaceFeature* feature in features)
+    {
+        drawRect = feature.bounds;
+    }
+
     
     [_videoPreviewView bindDrawable];
     

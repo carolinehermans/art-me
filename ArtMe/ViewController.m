@@ -43,7 +43,7 @@
 
 // Load information about painters and paintings
 - (void) populatePaintingInfoDictionary {
-    NSMutableDictionary *monaDictionary = [self populatePaintingDictionaryWithPainter:@"Leonardo Da Vinci" WithYear:@"1506" WithImage:@"mona.jpg"];
+    NSMutableDictionary *monaDictionary = [self populatePaintingDictionaryWithPainter:@"Leonardo Da Vinci" WithYear:@"1506" WithImage:@"mona.png"];
     NSMutableDictionary *kissDictionary = [self populatePaintingDictionaryWithPainter:@"Gustav Klimt" WithYear:@"1908" WithImage:@"kiss.jpg"];
     NSMutableDictionary *pearlDictionary = [self populatePaintingDictionaryWithPainter:@"Johannes Vermeer" WithYear:@"1665" WithImage:@"pearl.jpg"];
     NSMutableDictionary *henryDictionary = [self populatePaintingDictionaryWithPainter:@"Hans Holbein" WithYear:@"1537" WithImage:@"henry.jpg"];

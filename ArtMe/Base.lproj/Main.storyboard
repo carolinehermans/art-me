@@ -156,7 +156,7 @@
                     <connections>
                         <outlet property="imageView" destination="KDA-GS-52d" id="BaI-8i-QrA"/>
                         <outlet property="paintingImage" destination="bNb-Zf-JJR" id="XTk-DJ-M41"/>
-                        <outlet property="paintingImageView" destination="bNb-Zf-JJR" id="WDJ-PJ-9UW"/>
+                        <outlet property="paintingImageView" destination="bNb-Zf-JJR" id="kGZ-wU-BVJ"/>
                         <outlet property="paintingNameLabel" destination="qqD-t0-5EW" id="sdl-e1-z2g"/>
                     </connections>
                 </viewController>

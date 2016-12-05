@@ -19,10 +19,10 @@
 @property(nonatomic) NSString *paintingArtist;
 @property(nonatomic) NSString *paintingYear;
 @property(nonatomic) NSString *paintingImage;
+@property (weak, nonatomic) IBOutlet UIImageView *paintingImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *paintingNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *paintingArtistLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *paintingImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property AVCaptureDevice *videoDevice;
